@@ -37,6 +37,85 @@
       </ul>
     </nav>
   </header>
+  <main class="page-main">
+    <section class="form">
+      <h2 class="visually-hidden">
+        Секция с формой
+      </h2>
+      <form action="https://echo.htmlacademy.ru" method="post" class="form__main_form">
+        <div class="main_form__program">
+          <h3 class="program__header">
+            Подбор программы
+          </h3>
+          <p class="program__text">
+            Заполните анкету, и мы подберем программу питания для вашего кота
+          </p>
+          <p class="program__name">ИМЯ:* <input type="text" placeholder="БАРСИК" name="name" required></p>
+          <p class="program__weight">Вес (кг):* <input type="number" placeholder="7" name="weight" required></p>
+          <p class="program__age">Возраст (лет): <input type="number" placeholder="7" name="age"></p>
+          <p class="program__radio program__radio--checked"><input name="diet" type="radio" checked>Похудение</p>
+          <p class="program__radio"><input name="diet" type="radio">Набор массы</p>
+          <p class="program__radio"><input name="diet" type="radio">Не знаю (Нужен ваш совет)</p>
+        </div>
+        <div class="main_form__contacts">
+          <h3 class="contacts__header">
+            Контактные данные (владельца кота)
+          </h3>
+          <p class="contacts__email">E-mail:*
+            <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+            <a class="email__photo">
+              <img src="https://via.placeholder.com/150x150" alt="Иконка почты">
+            </a>
+          </p>
+          <p class="program__phone">Телефон:*
+            <input type="tel" name="phone" placeholder="8 (960) 900-60-90"  required>
+            <a class="phone__photo">
+              <img src="https://via.placeholder.com/150x150" alt="Иконка телефона">
+            </a>
+          </p> <!--Маску позже сделаю если надо ее делать -->
+        </div>
+        <div class="main_form__comments">
+          <h3 class="comments__header">
+            Комментарий
+          </h3>
+          <p class="comments__textarea">
+            <textarea name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </p>
+        </div>
+        <div class="main_form__extra">
+          <h3 class="extra__header">
+            Дополнительно
+          </h3>
+          <p class="extra__checkbox extra__checkbox--checked"><input type="checkbox" name="extra" checked>Сахарозаменитель</p>
+          <p class="extra__checkbox"><input type="checkbox" name="extra">Питьевая вода</p>
+          <p class="extra__checkbox"><input type="checkbox" name="extra">Молоко</p>
+          <p class="extra__checkbox"><input type="checkbox" name="extra">Витамины</p>
+        </div>
+        <input class="main_form__submit" type="submit" value="Отправить заявку">
+        <small class="main_form__legend">
+          * — Обязательные поля *
+        </small>
+      </form>
+    </section>
+    <section class="contacts">
+      <h2 class="visually-hidden">
+         Адресс и карта с местоположением
+      </h2>
+      <div class="contacts__information">
+        <h3 class="information__invite">
+          приглашаем к сотрудничеству дилеров!
+        </h3>
+        <p class="information__address">
+          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        </p>
+      </div>
+      <div class="contacts__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1937.2259316692468!2d30.320866623588035!3d59.938722387478734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595252569653!5m2!1sru!2sru"
+                width="320" height="362">
+        </iframe>
+      </div>
+    </section>
+  </main>
   <footer class="page-footer">
     <h1 class="visually-hidden">
       Социальные сети и разработчики
