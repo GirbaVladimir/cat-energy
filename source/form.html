@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="css/style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Подбор программы</title>
 </head>
-<body>
+<body class="body">
   <header class="page-header">
     <a class="page-header__logo">
-      <img src="https://via.placeholder.com/150x150" alt="Кот-супермен">
+      <img src="img/logo-mobile.svg" alt="Кот-супермен">
     </a>
+    <!--
     <a class="page-header__text">
       <img src="https://via.placeholder.com/150x150" alt="Надпись заголовка">
     </a>
-    <button type="button" class="main-nav__button">
-      <span class="visually-hidden">
+    -->
+    <button type="button" class="page-header__button">
+            <span class="visually-hidden">
               Открыть меню
-      </span>
+            </span>
     </button>
     <nav class="main-nav">
       <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active">
-          <a href="">
+        <li class="site-list__item">
+          <a href="index.html">
             Главная
           </a>
         </li>
         <li class="site-list__item">
-          <a href="">
+          <a href="catalog.html">
             Каталог продукции
           </a>
         </li>
-        <li class="site-list__item">
-          <a href="">
+        <li class="site-list__item site-list__item--active">
+          <a href="form.html">
             Подбор программы
           </a>
         </li>
@@ -42,8 +45,8 @@
       <h2 class="visually-hidden">
         Секция с формой
       </h2>
-      <form action="https://echo.htmlacademy.ru" method="post" class="form__main_form">
-        <div class="main_form__program">
+      <form action="https://echo.htmlacademy.ru" method="post" class="form__main-form">
+        <div class="main-form__program">
           <h3 class="program__header">
             Подбор программы
           </h3>
@@ -57,24 +60,18 @@
           <p class="program__radio"><input name="diet" type="radio">Набор массы</p>
           <p class="program__radio"><input name="diet" type="radio">Не знаю (Нужен ваш совет)</p>
         </div>
-        <div class="main_form__contacts">
-          <h3 class="contacts__header">
+        <div class="main-form__user-contacts">
+          <h3 class="user-contacts__header">
             Контактные данные (владельца кота)
           </h3>
-          <p class="contacts__email">E-mail:*
+          <p class="user-contacts__email">E-mail:*
             <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
-            <a class="email__photo">
-              <img src="https://via.placeholder.com/150x150" alt="Иконка почты">
-            </a>
           </p>
-          <p class="program__phone">Телефон:*
+          <p class="user-contacts__phone">Телефон:*
             <input type="tel" name="phone" placeholder="8 (960) 900-60-90"  required>
-            <a class="phone__photo">
-              <img src="https://via.placeholder.com/150x150" alt="Иконка телефона">
-            </a>
           </p> <!--Маску позже сделаю если надо ее делать -->
         </div>
-        <div class="main_form__comments">
+        <div class="main-form__comments">
           <h3 class="comments__header">
             Комментарий
           </h3>
@@ -82,17 +79,17 @@
             <textarea name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
           </p>
         </div>
-        <div class="main_form__extra">
+        <div class="main-form__extra">
           <h3 class="extra__header">
             Дополнительно
           </h3>
-          <p class="extra__checkbox extra__checkbox--checked"><input type="checkbox" name="extra" checked>Сахарозаменитель</p>
+          <p class="extra__checkbox"><input type="checkbox" name="extra" checked>Сахарозаменитель</p>
           <p class="extra__checkbox"><input type="checkbox" name="extra">Питьевая вода</p>
           <p class="extra__checkbox"><input type="checkbox" name="extra">Молоко</p>
           <p class="extra__checkbox"><input type="checkbox" name="extra">Витамины</p>
         </div>
-        <input class="main_form__submit" type="submit" value="Отправить заявку">
-        <small class="main_form__legend">
+        <input class="main-form__submit" type="submit" value="Отправить заявку">
+        <small class="main-form__legend">
           * — Обязательные поля *
         </small>
       </form>
@@ -122,24 +119,24 @@
     </h1>
     <div class="page-footer__logo">
       <a class="logo__picture">
-        <img src="https://via.placeholder.com/150x150" alt="Логотип">
+        <img src="img/logo-footer.svg" alt="Логотип">
       </a>
     </div>
     <div class="page-footer__media">
-      <ul class="footer__media__list">
-        <li class="footer__media__item">
-          <a class="media__item media__item--vk">
-            <img src="https://via.placeholder.com/150x150" alt="ВК">
+      <ul class="media__list">
+        <li class="media__item">
+          <a class="media__picture media__picture--vk">
+            <img src="img/icon-vk.svg" alt="ВК">
           </a>
         </li>
-        <li class="footer__media__item">
-          <a class="media__item media__item--instagram">
-            <img src="https://via.placeholder.com/150x150" alt="инстаграм">
+        <li class="media__item">
+          <a class="media__picture media__picture--instagram">
+            <img src="img/icon-insta.svg" alt="инстаграм">
           </a>
         </li>
-        <li class="footer__media__item">
-          <a class="media__item media__item--facebook">
-            <img src="https://via.placeholder.com/150x150" alt="фейсбук">
+        <li class="media__item">
+          <a class="media__picture media__picture--facebook">
+            <img src="img/icon-fb.svg" alt="фейсбук">
           </a>
         </li>
       </ul>
@@ -149,7 +146,7 @@
         HTML Academy
       </p>
       <a class="creators__logo">
-        <img src="https://via.placeholder.com/150x150" alt="лого">
+        <img src="img/htmlacademy.svg" alt="лого">
       </a>
     </div>
   </footer>
