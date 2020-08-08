@@ -8,13 +8,12 @@
 <body class="body">
   <header class="page-header">
     <a class="page-header__logo">
-      <img src="img/logo-mobile.svg" alt="Кот-супермен">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img src="img/logo-mobile.svg" alt="Кот-супермен" width="256px">
+      </picture>
     </a>
-    <!--
-    <a class="page-header__text">
-      <img src="https://via.placeholder.com/150x150" alt="Надпись заголовка">
-    </a>
-    -->
     <button type="button" class="page-header__button">
       <span class="visually-hidden">
         Открыть меню
@@ -22,17 +21,17 @@
     </button>
     <nav class="main-nav">
       <ul class="main-nav__list site-list">
-        <li class="site-list__item">
+        <li class="site-list__item site-list__item--black">
           <a href="index.html">
             Главная
           </a>
         </li>
-        <li class="site-list__item">
+        <li class="site-list__item site-list__item--black">
           <a href="catalog.html">
             Каталог продукции
           </a>
         </li>
-        <li class="site-list__item site-list__item--active">
+        <li class="site-list__item site-list__item--black аsite-list__item--active">
           <a href="form.html">
             Подбор программы
           </a>

@@ -1,9 +1,7 @@
 @import "fonts";
 
 .catalog {
-  align-content: center;
-  width: 320px;
-  border: 2px solid sandybrown;
+  //pust
 }
 
 .catalog__header {
@@ -16,15 +14,47 @@
 }
 
 .catalog__list {
-  //пока пустой
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding-left: 0;
+  gap: 20px;
+  grid-auto-columns: 320px;
+
+
+  @media (min-width: @tablet-width) {
+    grid-auto-columns: 324px;
+    grid-template-areas: "r r";
+    gap: 60px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-auto-columns: 245px;
+    grid-template-areas: "r r r r";
+  }
 }
 
 .catalog__item {
   width: 320px;
   list-style-type: none;
   margin-top: 10px; //пока так
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    height: 511px;
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+  }
 }
 
 .catalog__show-more {
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    //pust
+  }
 }

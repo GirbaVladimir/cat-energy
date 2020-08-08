@@ -2,12 +2,23 @@
 
 .programs {
   align-content: center;
-  border: 2px solid blue;
-  width: 320px;
 }
 
 .programs__list {
-  //poka pusto
+  display: grid;
+  grid-template-rows: 280px 280px;
+  padding: 0;
+  justify-items: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    grid-template-rows: 400px 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .programs__item {
@@ -15,6 +26,18 @@
   background: #f2f2f2;
   width: 280px;
   height: 266px;
+  padding: 0;
+  list-style-position: inside;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 372px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 374px;
+  }
 }
 
 .programs__button {
@@ -29,6 +52,11 @@
   color: black;
   background-image: url("../img/icon-right-arrow-long.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .programs__photo {
@@ -39,6 +67,15 @@
   line-height: 37px;
   text-transform: uppercase;
   color: black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    //pust
+  }
 }
 
 .programs__text {
@@ -47,6 +84,15 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    //pust
+  }
 }
 
 .programs__photo--slim {
