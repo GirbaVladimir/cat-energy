@@ -1,4 +1,14 @@
+@import "fonts";
 
 .body {
   margin: 0 auto;
+  width: 320px;
+
+  @media screen and (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }

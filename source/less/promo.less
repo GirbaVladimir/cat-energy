@@ -1,19 +1,30 @@
 @import "fonts";
 
 .promo {
-  text-align: center;
-  width: 320px;
   height: 480px;
-  border: 2px solid red;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-size: 320px 305px;
   background-color: white;
   background-repeat: no-repeat;
+
+  @media screen and (min-width: @tablet-width) {
+    height: 810px;
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-size: 709px 609px;
+    background-position: bottom;
+    padding-top: 30px;
+    padding-left: 110px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    height: 696px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-size: 720px 696px;
+    background-position: right;
+  }
 }
 
 .promo__button {
-  width: 280px;
-  height: 40px;
   background: #68b738;
   padding: 8px 44px;
   text-decoration: none;
@@ -24,6 +35,18 @@
   line-height: 18px;
   color: white;
   text-transform: uppercase;
+  text-align: center;
+
+  @media screen and (min-width: @tablet-width) {
+    padding: 14px 26px;
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    position: absolute;
+    left: 190px;
+    top: 455px;
+  }
 }
 
 .promo__photo {
@@ -32,6 +55,20 @@
     height: 270px;
     padding-top: 15px;
     padding-bottom: 8px;
+    margin: 0 auto;
+
+    @media screen and (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media screen and (min-width: @desktop-width) {
+      display: initial;
+      min-width: 552px;
+      min-height: 499px;
+      position: absolute;
+      left: 558px;
+      top: 141px;
+    }
   }
 }
 
@@ -47,6 +84,24 @@
   color: white;
   margin: 0 auto;
   padding-bottom: 20px;
+  text-align: center;
+
+  @media screen and (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    padding-bottom: 64px;
+    width: 283px;
+    height: 20px;
+    text-align: left;
+    margin: 0;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    position: absolute;
+    left: 190px;
+    top: 383px;
+  }
 }
 
 .promo__text {
@@ -60,4 +115,23 @@
   color: white;
   margin: 0 auto;
   padding: 25px;
+  text-align: center;
+
+  @media screen and (min-width: @tablet-width) {
+    width: 414px;
+    height: 120px;
+    padding-bottom: 30px;
+    padding-left: 0;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    text-align: left;
+    margin: 0;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    position: absolute;
+    left: 190px;
+    top: 210px;
+  }
 }

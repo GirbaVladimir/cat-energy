@@ -1,15 +1,38 @@
 @import "fonts";
 
 .block-special {
-  align-content: center;
-  width: 320px;
-  border: 2px solid yellow;
-  height: 700px;
+  height: 600px;
 }
 
 .block-special__list {
   width: 279px;
   height: 300px;
+  display: grid;
+  padding: 0;
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "a"
+    "a"
+    "a"
+    "a";
+
+  @media screen and  (min-width: @tablet-width) {
+    margin: 0;
+    grid-template-areas:
+      "a a"
+      "a a";
+    grid-auto-columns: 200px;
+    gap: 20px 270px;
+    margin-left: 35px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    text-align: left;
+    grid-template-areas: "a a a a";
+    gap: 0 150px;
+  }
 }
 
 .block-special__header {
@@ -20,11 +43,19 @@
   line-height: 40px;
   text-align: center;
   color: #000000;
+
+  @media screen and (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    margin-left: 30px;
+  }
 }
 
 .block-special__item {
   list-style-type: none;
   background-color: white;
+  list-style-position: inside;
 }
 
 .block-special__picture {
@@ -40,4 +71,9 @@
   font-size: 14px;
   line-height: 18px;
   color: #444444;
+
+  @media screen and  (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

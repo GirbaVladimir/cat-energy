@@ -1,9 +1,24 @@
 @import "fonts";
 
 .contacts {
-  border: 2px solid green;
-  width: 320px;
   background: #f2f2f2;
+  min-width: 320px;
+  max-width: 767px;
+  //margin-top: 33px;
+
+  @media screen and (min-width: @tablet-width) {
+    min-width: 768px;
+    max-width: 1439px;
+    //margin-top: 76px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    min-width: 1440px;
+    display: grid;
+    grid-template-columns: 720px 720px;
+    grid-template-rows: 100px 200px 100px;
+    //margin-top: 86px;
+  }
 }
 
 .contacts--index {
@@ -11,13 +26,41 @@
 }
 
 .contacts__information {
-  //pust
+  @media screen and (min-width: @tablet-width) {
+    height: 200px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    z-index: 1;
+    background-color: white;
+    width: 570px;
+    margin-left: auto;
+    margin-right: 40px;
+  }
 }
 
 .contacts__map {
+  @media screen and (min-width: @desktop-width) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
   iframe {
-    width: 320px;
+    min-width: 320px;
+    max-width: 767px;
     height: 362px;
     border: 0;
+
+    @media screen and (min-width: @tablet-width) {
+      min-width: 768px;
+      max-width: 1439px;
+      height: 400px;
+    }
+
+    @media screen and (min-width: @desktop-width) {
+      min-width: 1440px;
+    }
   }
 }

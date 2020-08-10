@@ -2,10 +2,26 @@
 
 .site-list {
   background-color: white;
+
+  @media screen and (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    //pust
+  }
 }
 
 .site-list__item {
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: #68b738;
+  }
 
   a {
     text-decoration: none;
@@ -15,9 +31,30 @@
     font-weight: 500;
     line-height: 20px;
     text-transform: uppercase;
+
+    @media screen and (min-width: @tablet-width) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @media screen and (min-width: @desktop-width) {
+      font-size: 20px;
+      line-height: 30px;
+      color: #ffffff;
+    }
   }
 }
 
 .site-list__item--active {
   //pust
+}
+
+.site-list__item--black {
+  @media screen and (min-width: @desktop-width) {
+    background-color: white;
+
+    a {
+      color: black;
+    }
+  }
 }

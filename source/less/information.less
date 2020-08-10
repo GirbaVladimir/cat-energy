@@ -1,5 +1,10 @@
 @import "fonts";
 
+.information {
+  display: flex;
+  justify-content: space-around;
+}
+
 .information__address {
   font-family: @text-font;
   font-style: normal;
@@ -7,6 +12,11 @@
   font-size: 14px;
   line-height: 20px;
   color: #444444;
+
+  @media screen and (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .information__invite {
@@ -17,4 +27,9 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #111111;
+
+  @media screen and (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
