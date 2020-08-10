@@ -52,12 +52,16 @@
           <p class="program__text">
             Заполните анкету, и мы подберем программу питания для вашего кота
           </p>
-          <p class="program__name">ИМЯ:* <input type="text" placeholder="БАРСИК" name="name" required></p>
-          <p class="program__weight">Вес (кг):* <input type="number" placeholder="7" name="weight" required></p>
-          <p class="program__age">Возраст (лет): <input type="number" placeholder="7" name="age"></p>
-          <p class="program__radio program__radio--checked"><input name="diet" type="radio" checked>Похудение</p>
-          <p class="program__radio"><input name="diet" type="radio">Набор массы</p>
-          <p class="program__radio"><input name="diet" type="radio">Не знаю (Нужен ваш совет)</p>
+          <div class="program__input-wrapper">
+            <p class="program__name">ИМЯ:* <input type="text" placeholder="БАРСИК" name="name" required></p>
+            <p class="program__weight">Вес (кг):* <input type="number" placeholder="7" name="weight" required></p>
+            <p class="program__age">Возраст (лет): <input type="number" placeholder="7" name="age"></p>
+          </div>
+          <div class="program__radio-wrapper">
+            <p class="program__radio program__radio--checked"><input name="diet" type="radio" checked>Похудение</p>
+            <p class="program__radio"><input name="diet" type="radio">Набор массы</p>
+            <p class="program__radio"><input name="diet" type="radio">Не знаю (Нужен ваш совет)</p>
+          </div>
         </div>
         <div class="main-form__user-contacts user-contacts">
           <h3 class="user-contacts__header">

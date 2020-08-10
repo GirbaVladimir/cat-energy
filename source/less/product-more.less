@@ -1,7 +1,23 @@
 @import "fonts";
 
 .product-more {
-  border: 2px solid red;
+  min-width: 320px;
+  max-width: 767px;
+  margin-bottom: 33px;
+
+  @media screen and (min-width: @tablet-width) {
+    min-width: @tablet-width;
+    max-width: 1439px;
+    margin-bottom: 76px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    min-width: @desktop-width;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    margin-bottom: 86px;
+  }
 }
 
 .product-more__header {
@@ -10,10 +26,31 @@
   font-weight: normal;
   font-size: 24px;
   line-height: 24px;
-  text-align: center;
   color: #000000;
+  margin-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: 67px;
+    margin-bottom: 79px;
+    margin-top: 67px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    margin-left: 110px;
+    margin-top: 79px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
 
 .product-more__list-more {
+  //pusto
+}
+
+.product-more__gift {
   //pust
 }

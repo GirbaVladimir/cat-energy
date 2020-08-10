@@ -1,7 +1,18 @@
 @import "fonts";
 
 .catalog {
-  //pust
+  width: 320px;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+
+  @media screen and (min-width: @tablet-width) {
+    border: 0;
+    width: 768px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }
 
 .catalog__header {
@@ -11,50 +22,67 @@
   font-size: 36px;
   line-height: 36px;
   color: #000000;
+  margin-left: 20px;
+  margin-top: 27px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: @tablet-width) {
+    margin-left: 30px;
+    margin-top: 64px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    margin-top: 74px;
+    margin-left: 110px;
+  }
 }
 
 .catalog__list {
   display: grid;
   justify-items: center;
   align-items: center;
-  padding-left: 0;
-  gap: 20px;
+  gap: 19px;
   grid-auto-columns: 320px;
+  padding-left: 0;
+  padding-top: 8px;
+  margin-bottom: 24px;
+  border-top: 1px solid #ebebeb;
 
-
-  @media (min-width: @tablet-width) {
+  @media screen and (min-width: @tablet-width) {
+    border: 0;
     grid-auto-columns: 324px;
     grid-template-areas: "r r";
-    gap: 60px;
-    padding-left: 20px;
+    gap: 68px 60px;
+    margin-left: 31px;
+    margin-top: 83px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media screen and (min-width: @desktop-width) {
     grid-auto-columns: 245px;
     grid-template-areas: "r r r r";
+    margin-left: 110px;
+    margin-top: 84px;
+    gap: 63px 80px;
   }
 }
 
 .catalog__item {
   width: 320px;
   list-style-type: none;
-  margin-top: 10px; //пока так
 
-  @media (min-width: @tablet-width) {
+  @media screen and (min-width: @tablet-width) {
     width: 324px;
     height: 511px;
     background-color: #f2f2f2;
   }
 
-  @media (min-width: @desktop-width) {
+  @media screen and (min-width: @desktop-width) {
     width: 245px;
   }
 }
 
 .catalog__show-more {
   text-align: center;
-
-  @media (min-width: @tablet-width) {
-    //pust
-  }
 }

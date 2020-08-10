@@ -1,29 +1,40 @@
 @import "fonts";
 
 .list-more {
-  //pust
+  width: 280px;
+  padding-left: 0;
+  margin: auto;
+
+  @media screen and (min-width: @tablet-width) {
+    border: 1px solid #cdcdcd;
+    width: 708px;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    border: 0;
+    border-top: 1px solid #cdcdcd;
+    border-bottom: 1px solid #cdcdcd;
+    width: 896px;
+    height: 288px;
+    margin-right: 0;
+    margin-left: 100px;
+  }
 }
 
 .list-more__item-more {
   list-style-type: none;
-}
 
-.list-more__button {
-  text-decoration: none;
-  background: #68b738;
-  padding: 8px 44px;
-  font-family: @main-font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 0px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-}
+  @media screen and (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
 
-.list-more__description-more {
-  //pust
+  @media screen and (min-width: @desktop-width) {
+    height: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 .list-more__name {
@@ -32,9 +43,34 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   text-transform: uppercase;
   color: #222222;
+
+  @media screen and (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.list-more__button {
+  text-decoration: none;
+  background: #68b738;
+  padding: 8px;
+  //padding: 8px 44px;
+  font-family: @main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 0px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  @media screen and (min-width: @desktop-width) {
+    line-height: 20px;
+  }
+}
+
+.list-more__description-more {
+  //pust
 }

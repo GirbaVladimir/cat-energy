@@ -1,7 +1,16 @@
 @import "fonts";
 
 .form {
-  border: 2px solid peachpuff;
+  border-top: 1px solid #ebebeb;
+  width: 320px;
+
+  @media screen and (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .form__main-form {

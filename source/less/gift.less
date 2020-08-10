@@ -1,15 +1,24 @@
 @import "fonts";
 
 .gift {
-  text-align: center;
-  border: 2px solid purple;
-}
-
-.gift__wrapper {
   width: 280px;
   height: 289px;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
-  margin: auto;
+  margin: 39px auto 0px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 200px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    margin: 69px auto 0px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    margin: 1px 110px 0px 80px;
+  }
 }
 
 .gift__button-photo {
@@ -25,8 +34,14 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
   text-align: center;
   color: #ffffff;
+
+  @media screen and (min-width: @tablet-width) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: @desktop-width) {
+    text-align: center;
+  }
 }
