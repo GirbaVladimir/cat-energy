@@ -1,23 +1,27 @@
-@import "fonts";
 
 .programs {
-  align-content: center;
+  //
 }
 
 .programs__list {
   display: grid;
-  grid-template-rows: 280px 280px;
+  grid-template-rows: 266px 266px;
   padding: 0;
   justify-items: center;
   align-items: center;
+  gap: 20px;
 
   @media (min-width: @tablet-width) {
-    grid-template-rows: 400px 400px;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
+    margin-left: 110px;
+    margin-top: 82px;
   }
 }
 
@@ -26,8 +30,6 @@
   background: #f2f2f2;
   width: 280px;
   height: 266px;
-  padding: 0;
-  list-style-position: inside;
 
   @media (min-width: @tablet-width) {
     width: 708px;
@@ -50,7 +52,7 @@
   text-align: center;
   text-transform: uppercase;
   color: black;
-  background-image: url("../img/icon-right-arrow-long.svg");
+  background-image: url("../../img/icon-right-arrow-long.svg");
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {

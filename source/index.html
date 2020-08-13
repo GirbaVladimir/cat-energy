@@ -2,6 +2,7 @@
 <html lang="ru" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
@@ -56,12 +57,19 @@
           <a class="promo__photo">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png">
+
               <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
               <img src="img/index-can-mobile@1x.png" alt="Промо-корм">
             </picture>
           </a>
           <a class="promo__button" href="catalog.html">
             Подобрать программу
+          </a>
+          <a class="promo__background">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index-background-desktop@1x.jpg">
+              <img src="#" alt="Промо-корм">
+            </picture>
           </a>
       </section>
       <section class="programs">
@@ -107,7 +115,7 @@
         <ul class = "block-special__list">
           <li class = "block-special__item block-special__item--paper">
             <a class=block-special__picture">
-              <img src="img/advantage-leaf@1x.png" alt="питание">
+              <img src="https://via.placeholder.com/60x60" alt="питание">
             </a>
             <p class="block-special__text">
               Функциональное питание содержит только полезные питательные вещества.
@@ -115,7 +123,7 @@
           </li>
           <li class = "block-special__item block-special__item--water" >
             <a class=block_special__picture">
-              <img src="img/advantage-powder@1x.png" alt="питание">
+              <img src="https://via.placeholder.com/60x60" alt="питание">
             </a>
             <p class="block-special__text">
               Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
@@ -123,7 +131,7 @@
           </li>
           <li class = "block-special__item block-special__item--fork">
             <a class=block-special__picture">
-              <img src="img/advantage-dining@1x.png" alt="питание">
+              <img src="https://via.placeholder.com/60x60" alt="питание">
             </a>
             <p class="block-special__text">
               Замените один-два приема обычной еды на наше функциональное питание.
@@ -131,7 +139,7 @@
           </li>
           <li class = "block-special__item block-special__item--alarm">
             <a class=block-special__picture">
-              <img src="img/advantage-clock@1x.png" alt="питание">
+              <img src="https://via.placeholder.com/60x60" alt="питание">
             </a>
             <p class="block-special__text">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
@@ -144,60 +152,67 @@
         <h2 class="visually-hidden">
           Секция с живым примером
         </h2>
-        <h3 class="live-example__header">
-          Живой пример
-        </h3>
-        <p class="live-example__text">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <div class="live-example__weight weight">
-          <dl class="weight__amount">
-            <dt class="weight__how-much">
-              5 КГ
-            </dt>
-            <dd class="weight__description">
-              снижение веса
-            </dd>
-          </dl>
+        <div class="live-example__wrapper">
+          <h3 class="live-example__header">
+            Живой пример
+          </h3>
+          <p class="live-example__text">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
+          <div class="live-example__weight weight">
+            <dl class="weight__amount">
+              <dt class="weight__how-much">
+                5 КГ
+              </dt>
+              <dd class="weight__description">
+                снижение веса
+              </dd>
+            </dl>
+          </div>
+          <div class="live-example__time time">
+            <dl class="time__amount">
+              <dt class="time__how-much">
+                60 дней
+              </dt>
+              <dd class="time__description">
+                затрачено времени
+              </dd>
+            </dl>
+          </div>
+          <p class="live-example__price">
+            Затраты на питание: 15 000 РУБ.
+          </p>
+          <div class="live-example__slider">
+            <a class="live-example__photo live-example__photo--before">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                <img src="img/before-mobile@1x.png" alt="до">
+              </picture>
+            </a>
+            <!--
+            <a class="live-example__photo live-example__photo--after">
+              <img src="https://via.placeholder.com/150x150" alt="после">
+            </a>
+            -->
+            <button class="live-example__button live-example__button--before">
+              Было
+            </button>
+            <a class="live-example__switch live-example__switch--before">
+              <img src="https://via.placeholder.com/84x14" alt="до_переключатель">
+            </a>
+            <!--
+            <a class="live-example__switch live-example__switch--after">
+              <img src="https://via.placeholder.com/50x50" alt="после_переключатель">
+            </a>
+            -->
+            <button class="live-example__button live-example__button--after">
+              Стало
+            </button>
+          </div>
         </div>
-        <div class="live-example__time time">
-          <dl class="time__amount">
-            <dt class="time__how-much">
-              60 дней
-            </dt>
-            <dd class="time__description">
-              затрачено времени
-            </dd>
-          </dl>
-        </div>
-        <p class="live-example__price">
-          Затраты на питание: 15 000 РУБ.
-        </p>
-        <div class="live-example__slider">
-          <a class="live-example__photo live-example__photo--before">
-            <img src="img/before-mobile@1x.png" alt="до">
-          </a>
-          <!--
-          <a class="live-example__photo live-example__photo--after">
-            <img src="https://via.placeholder.com/150x150" alt="после">
-          </a>
-          -->
-          <button class="live-example__button live-example__button--before">
-            Было
-          </button>
-          <a class="live-example__switch live-example__switch--before">
-            <img src="https://via.placeholder.com/50x50" alt="до_переключатель">
-          </a>
-          <!--
-          <a class="live-example__switch live-example__switch--after">
-            <img src="https://via.placeholder.com/50x50" alt="после_переключатель">
-          </a>
-          -->
-          <button class="live-example__button live-example__button--after">
-            Стало
-          </button>
-        </div>
+      </section>
       </section>
       <section class="contacts contacts--index">
         <h2 class="visually-hidden">
@@ -205,16 +220,16 @@
         </h2>
         <div class="contacts__information information">
           <h3 class="information__invite">
-            приглашаем к сотрудничеству дилеров!
+            приглашаем <br> к сотрудничеству дилеров!
           </h3>
           <p class="information__address">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+            ул. Большая Конюшенная, д. 19/8 <br> <br> Cанкт-Петербург
           </p>
         </div>
         <div class="contacts__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1937.2259316692468!2d30.320866623588035!3d59.938722387478734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595252569653!5m2!1sru!2sru">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1937.2259316692468!2d30.320866623588035!3d59.938722387478734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595252569653!5m2!1sru!2sru"
+                  width="320" height="362">
           </iframe>
-          <!-- Не знаю насчет метки, но вроде по документации надо работать с api через js, так что пока что ограничусь просто местоположением -->
         </div>
       </section>
     </main>

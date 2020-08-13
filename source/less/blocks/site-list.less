@@ -1,14 +1,14 @@
-@import "fonts";
 
 .site-list {
-  background-color: white;
-
   @media screen and (min-width: @tablet-width) {
     display: flex;
   }
 
-  @media screen and (min-width: @desktop-width) {
-    //pust
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin: 0;
   }
 }
 
@@ -17,10 +17,6 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 33px;
-  }
-
-  @media (min-width: @desktop-width) {
-    background-color: #68b738;
   }
 
   a {
@@ -51,8 +47,6 @@
 
 .site-list__item--black {
   @media screen and (min-width: @desktop-width) {
-    background-color: white;
-
     a {
       color: black;
     }

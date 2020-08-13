@@ -1,0 +1,96 @@
+
+.media {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 1px solid #d9d9d9;
+  height: 63px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 66px;
+    border: 0;
+    height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 62px;
+    padding-bottom: 63px;
+  }
+}
+
+.media__list {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  align-items: center;
+  margin-top: 21px;
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.media__item {
+  list-style-type: none;
+}
+
+.media__picture {
+  //pust
+}
+
+.media__picture--vk {
+  margin-left: 0;
+
+  img {
+    width: 22px;
+    height: 13px;
+  }
+
+  @media (min-width: @tablet-width) {
+    img {
+      width: 30px;
+      height: 22px;
+    }
+  }
+}
+
+.media__picture--facebook {
+  margin-left: 33px;
+
+  img {
+    width: 11px;
+    height: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 21px;
+
+    img {
+      width: 28px;
+      height: 27px;
+    }
+  }
+}
+
+.media__picture--instagram {
+  margin-left: 37px;
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 27px;
+
+    img {
+      width: 23px;
+      height: 23px;
+    }
+  }
+}

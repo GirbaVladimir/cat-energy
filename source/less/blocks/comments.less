@@ -1,0 +1,76 @@
+
+.comments {
+  //pust
+}
+
+.comments__header {
+  font-family: @main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  color: #000000;
+  margin-left: 19px;
+  margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 76px;
+    margin-left: 69px;
+    width: 182px;
+    height: 36px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 110px;
+    margin-top: 69px;
+    margin-bottom: 76px;
+  }
+}
+
+.comments__textarea {
+  margin-bottom: 27px;
+
+  textarea {
+    margin-left: 20px;
+    padding-left: 15px;
+    padding-top: 13px;
+    resize: none;
+    width: 280px;
+    height: 150px;
+    font-family: @main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #444444;
+    border: 1px solid #e7e7e7;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+
+    textarea {
+      font-size: 20px;
+      line-height: 30px;
+      margin-left: 70px;
+      width: 631px;
+      height: 174px;
+      padding-left: 19px;
+      padding-top: 10px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 67px;
+
+    textarea {
+      margin-left: 110px;
+      width: 1220px;
+      height: 174px;
+    }
+  }
+}
