@@ -3,6 +3,7 @@
 <head>
     <link href="css/style.css" rel="stylesheet">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Подбор программы</title>
 </head>
 <body class="body">
@@ -45,56 +46,70 @@
         Секция с формой
       </h2>
       <form action="https://echo.htmlacademy.ru" method="post" class="form__main-form">
-        <div class="main-form__program program">
-          <h3 class="program__header">
-            Подбор программы
-          </h3>
-          <p class="program__text">
-            Заполните анкету, и мы подберем программу питания для вашего кота
-          </p>
-          <div class="program__input-wrapper">
-            <p class="program__name">ИМЯ:* <input type="text" placeholder="БАРСИК" name="name" required></p>
-            <p class="program__weight">Вес (кг):* <input type="number" placeholder="7" name="weight" required></p>
-            <p class="program__age">Возраст (лет): <input type="number" placeholder="7" name="age"></p>
+        <div class="main-form__wrapper">
+          <div class="main-form__program program">
+            <h3 class="program__header">
+              Подбор программы
+            </h3>
+            <p class="program__text">
+              Заполните анкету, и мы подберем программу питания для вашего кота
+            </p>
+            <div class="program__input-wrapper">
+              <p class="program__name">ИМЯ:* <input type="text" placeholder="БАРСИК" name="name" required></p>
+              <p class="program__weight">Вес (кг):* <input type="number" placeholder="7" name="weight" required></p>
+              <p class="program__age">Возраст (лет): <input type="number" placeholder="7" name="age"></p>
+            </div>
+            <div class="program__radio-wrapper">
+              <p class="program__radio program__radio--checked"><input name="diet" type="radio" checked>Похудение</p>
+              <p class="program__radio"><input name="diet" type="radio">Набор массы</p>
+              <p class="program__radio"><input name="diet" type="radio">Не знаю (Нужен ваш совет)</p>
+            </div>
           </div>
-          <div class="program__radio-wrapper">
-            <p class="program__radio program__radio--checked"><input name="diet" type="radio" checked>Похудение</p>
-            <p class="program__radio"><input name="diet" type="radio">Набор массы</p>
-            <p class="program__radio"><input name="diet" type="radio">Не знаю (Нужен ваш совет)</p>
+          <div class="main-form__user-contacts user-contacts">
+            <h3 class="user-contacts__header">
+              Контактные данные (владельца кота)
+            </h3>
+            <p class="user-contacts__email">E-mail:*
+              <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+            </p>
+            <p class="user-contacts__phone">Телефон:*
+              <input type="tel" name="phone" placeholder="8 (960) 900-60-90"  required>
+            </p> <!--Маску позже сделаю если надо ее делать -->
+          </div>
+          <div class="main-form__comments comments">
+            <h3 class="comments__header">
+              Комментарий
+            </h3>
+            <p class="comments__textarea">
+              <textarea name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </p>
+          </div>
+          <div class="main-form__extra extra">
+            <h3 class="extra__header">
+              Дополнительно
+            </h3>
+            <ul class="extra__list">
+              <li class="extra__item">
+                <p class="extra__checkbox"><input type="checkbox" name="extra" checked>Сахарозаменитель</p>
+              </li>
+              <li class="extra__item">
+                <p class="extra__checkbox"><input type="checkbox" name="extra">Питьевая вода</p>
+              </li>
+              <li class="extra__item">
+                <p class="extra__checkbox"><input type="checkbox" name="extra">Молоко</p>
+              </li>
+              <li class="extra__item">
+                <p class="extra__checkbox"><input type="checkbox" name="extra">Витамины</p>
+              </li>
+            </ul>
+          </div>
+          <div class="main-form__submit-wrapper">
+            <input class="main-form__submit" type="submit" value="Отправить заявку">
+            <small class="main-form__legend">
+              * — Обязательные поля
+            </small>
           </div>
         </div>
-        <div class="main-form__user-contacts user-contacts">
-          <h3 class="user-contacts__header">
-            Контактные данные (владельца кота)
-          </h3>
-          <p class="user-contacts__email">E-mail:*
-            <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
-          </p>
-          <p class="user-contacts__phone">Телефон:*
-            <input type="tel" name="phone" placeholder="8 (960) 900-60-90"  required>
-          </p> <!--Маску позже сделаю если надо ее делать -->
-        </div>
-        <div class="main-form__comments comments">
-          <h3 class="comments__header">
-            Комментарий
-          </h3>
-          <p class="comments__textarea">
-            <textarea name="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </p>
-        </div>
-        <div class="main-form__extra extra">
-          <h3 class="extra__header">
-            Дополнительно
-          </h3>
-          <p class="extra__checkbox"><input type="checkbox" name="extra" checked>Сахарозаменитель</p>
-          <p class="extra__checkbox"><input type="checkbox" name="extra">Питьевая вода</p>
-          <p class="extra__checkbox"><input type="checkbox" name="extra">Молоко</p>
-          <p class="extra__checkbox"><input type="checkbox" name="extra">Витамины</p>
-        </div>
-        <input class="main-form__submit" type="submit" value="Отправить заявку">
-        <small class="main-form__legend">
-          * — Обязательные поля *
-        </small>
       </form>
     </section>
     <section class="contacts">
@@ -103,10 +118,10 @@
       </h2>
       <div class="contacts__information information">
         <h3 class="information__invite">
-          приглашаем к сотрудничеству дилеров!
+          приглашаем <br> к сотрудничеству дилеров!
         </h3>
         <p class="information__address">
-          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          ул. Большая Конюшенная, д. 19/8 <br> <br> Cанкт-Петербург
         </p>
       </div>
       <div class="contacts__map">
