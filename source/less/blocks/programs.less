@@ -26,6 +26,7 @@
 }
 
 .programs__item {
+  position: relative;
   list-style-type: none;
   background: #f2f2f2;
   width: 280px;
@@ -42,26 +43,7 @@
   }
 }
 
-.programs__button {
-  text-decoration: none;
-  font-family: @main-font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  color: black;
-  background-image: url("../../img/icon-right-arrow-long.svg");
-  background-repeat: no-repeat;
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-  }
-}
-
-.programs__photo {
+.programs__header {
   font-family: @main-font;
   font-style: normal;
   font-weight: normal;
@@ -69,14 +51,174 @@
   line-height: 37px;
   text-transform: uppercase;
   color: black;
+  margin-top: 30px;
+  margin-left: 91px;
+  margin-bottom: 29px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-top: 77px;
+    margin-left: 53px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 214px;
+    margin-bottom: 73px;
+  }
+}
+
+.programs__button {
+  display: block;
+  text-decoration: none;
+  font-family: @main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  color: black;
+  background-image: url("../../img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 32px 10px;
+  width: 120px;
+  margin-left: 19px;
+  margin-top: 19px;
+  margin-bottom: 22px;
+  padding-right: 7px;
+
+  &:hover {
+    background: url("../../img/icon-right-arrow-verylong.svg") no-repeat right;
+    background-size: 39.5px 10px;
+    width: 128px;
+
+    @media (min-width: @tablet-width) {
+      width: 163px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 52px;
+    margin-left: 52px;
+    margin-bottom: 57px;
+    width: 155px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 27px;
+    margin-bottom: 59px;
+  }
+}
+
+.programs__photo {
+  @media (min-width: @tablet-width) {
+    //pust
   }
 
   @media (min-width: @desktop-width) {
     //pust
+  }
+}
+
+.programs__photo--slim {
+  position: absolute;
+  top: 24px;
+  left: 22px;
+  background: #68b738;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+
+  img {
+    position: absolute;
+    top: -3px;
+    left: 7px;
+    width: 36px;
+    height: 50px;
+  }
+
+  @media (min-width: @tablet-width) {
+    right: 62px;
+    left: 446px;
+    top: 92px;
+    width: 200px;
+    height: 200px;
+
+    img {
+      top: -11px;
+      left: 30px;
+      width: 140px;
+      height: 192px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 52px;
+    top: 47px;
+    width: 100px;
+    height: 100px;
+
+    img {
+      top: -6px;
+      left: 15px;
+      width: 70px;
+      height: 97px;
+    }
+  }
+}
+
+.programs__photo--fat {
+  position: absolute;
+  top: 24px;
+  left: 22.5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #68b738;
+
+  img {
+    position: absolute;
+    top: 11px;
+    left: -9.5px;
+    width: 67px;
+    height: 28px;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: 448px;
+    top: 91px;
+    width: 200px;
+    height: 200px;
+
+    img {
+      left: -36px;
+      top: 44px;
+      width: 268px;
+      height: 112px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 52px;
+    top: 47px;
+    width: 100px;
+    height: 100px;
+
+    img {
+      top: 20px;
+      left: -19px;
+      width: 134px;
+      height: 56px;
+    }
   }
 }
 
@@ -86,27 +228,36 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  margin-left: 20px;
+  padding-bottom: 23px;
+  margin-right: 20px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 0;
 
   @media screen and (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    width: 377px;
+    height: 96px;
+    margin-left: 52px;
+    border: 0;
+    padding-bottom: 0;
   }
 
   @media screen and (min-width: @desktop-width) {
-    //pust
+    width: 467px;
+    height: 72px;
   }
 }
 
-.programs__photo--slim {
-  img {
-    width: 50px;
-    height: 53px;
+.programs__item--fat .programs__text {
+  @media (min-width: @tablet-width) {
+    width: 342px;
+    height: 96px;
   }
-}
 
-.programs__photo--fat {
-  img {
-    width: 67px;
-    height: 50px;
+  @media (min-width: @desktop-width) {
+    width: 457px;
+    height: 72px;
   }
 }

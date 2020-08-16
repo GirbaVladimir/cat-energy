@@ -1,19 +1,36 @@
 
 .description-more {
-  //pust
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+    margin-right: 37px;
+    margin-top: 30px;
+    height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto 0 163px;
+  }
 }
 
 .description-more__name {
+  display: inline-block;
   font-family: @text-font;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 14px;
   color: #444444;
+  float: left;
 
   @media screen and (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    text-align: left;
   }
 }
 
@@ -24,9 +41,16 @@
   font-size: 14px;
   line-height: 14px;
   color: #444444;
+  text-align: right;
 
   @media screen and (min-width: @tablet-width) {
+    display: inline-block;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+    margin-left: 0;
   }
 }

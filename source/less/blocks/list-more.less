@@ -1,18 +1,22 @@
 
 .list-more {
-  width: 280px;
+  border-top: 1px solid #cdcdcd;
+  margin-left: 20px;
   padding-left: 0;
-  margin: auto;
+  margin-right: 20px;
+  margin-top: 0;
 
   @media screen and (min-width: @tablet-width) {
     border: 1px solid #cdcdcd;
+    border-bottom: 0;
     width: 708px;
+    margin-left: 30px;
   }
 
   @media screen and (min-width: @desktop-width) {
     border: 0;
     border-top: 1px solid #cdcdcd;
-    border-bottom: 1px solid #cdcdcd;
+    //border-bottom: 1px solid #cdcdcd;
     width: 896px;
     height: 288px;
     margin-right: 0;
@@ -22,17 +26,22 @@
 
 .list-more__item-more {
   list-style-type: none;
+  border-bottom: 1px solid #cdcdcd;
 
   @media screen and (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
-    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    //grid-template-columns: 354px 354px;
   }
 
   @media screen and (min-width: @desktop-width) {
+    flex-wrap: nowrap;
     height: 40px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    align-items: center;
+    //justify-content: space-between;
   }
 }
 
@@ -44,18 +53,32 @@
   line-height: 16px;
   text-transform: uppercase;
   color: #222222;
+  margin-top: 13px;
+  margin-bottom: 13px;
 
   @media screen and (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    margin-top: 26px;
+    margin-left: 38px;
+    width: 163px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
   }
 }
 
 .list-more__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 40px;
   text-decoration: none;
   background: #68b738;
-  padding: 8px;
-  //padding: 8px 44px;
   font-family: @main-font;
   font-style: normal;
   font-weight: normal;
@@ -64,9 +87,31 @@
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 20px;
+  margin-top: 15px;
+
+  @media screen and (min-width: @tablet-width) {
+    width: 632px;
+    height: 40px;
+    margin-left: 38px;
+    margin-bottom: 28px;
+  }
 
   @media screen and (min-width: @desktop-width) {
     line-height: 20px;
+    width: 244px;
+    height: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    //margin-left: auto;
+  }
+
+  &:hover {
+    background: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 

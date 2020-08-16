@@ -1,6 +1,18 @@
 
 .show-more {
   list-style-type: none;
+  width: 320px;
+  margin-top: auto;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid #f2f2f2;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    margin-top: 76px;
+  }
 }
 
 .show-more__show {
@@ -12,12 +24,27 @@
   text-align: center;
   text-transform: uppercase;
   color: #111111;
+  margin-top: 23px;
+  margin-bottom: 8px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 49px 94px 23px 96px;
+    width: 134px;
+    height: 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 49px 55px 23px 56px;
+  }
 }
 
 .show-more__button {
-  margin-top: 20px;
   background: #f2f2f2;
-  //padding: 20px 94px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   font-family: @main-font;
   font-style: normal;
@@ -25,6 +52,32 @@
   font-size: 16px;
   text-transform: uppercase;
   color: #444444;
+  margin-top: 21px;
+  margin-bottom: 25px;
+  width: 279px;
+  height: 40px;
+  margin-left: 19px;
+
+  @media (min-width: @tablet-width) {
+    width: 249px;
+    height: 40px;
+    margin-left: 38px;
+    margin-bottom: 36px;
+    margin-top: 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 169px;
+    margin-bottom: 38px;
+  }
+
+  &:hover {
+    background: #ededed;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .show-more__description {
@@ -34,11 +87,40 @@
   font-size: 12px;
   line-height: 16px;
   color: #444444;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+    width: 167px;
+    height: 36px;
+    margin-left: 79px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 39px;
+  }
 }
 
 .show-more__plus {
   img {
+    margin-top: 26px;
     width: 30px;
     height: 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    img {
+      margin-top: 52px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    img {
+      margin-top: 51px;
+    }
   }
 }

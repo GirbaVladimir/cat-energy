@@ -20,7 +20,8 @@
       "a a"
       "a a";
     grid-auto-rows: 280px;
-    gap: 37px 153px;
+    grid-auto-columns: 247px;
+    gap: 37px 137px;
     margin-left: 30px;
     margin-right: 105px;
     margin-bottom: 47px;
@@ -29,7 +30,7 @@
   @media screen and (min-width: @desktop-width) {
     text-align: left;
     grid-template-areas: "a a a a";
-    gap: 94px;
+    gap: 78px;
     margin-left: 110px;
     margin-bottom: 11px;
   }
@@ -62,6 +63,7 @@
 }
 
 .block-special__item {
+  position: relative;
   list-style-type: none;
   background-color: white;
   display: flex;
@@ -83,17 +85,8 @@
 }
 
 .block-special__picture {
-  img {
-    width: 60px;
-    height: 60px;
-  }
-
-  @media (min-width: @tablet-width) {
-    img {
-      width: 80px;
-      height: 80px;
-    }
-  }
+  background: #68b738;
+  z-index: 2;
 }
 
 .block-special__text {
@@ -104,11 +97,102 @@
   line-height: 18px;
   color: #444444;
   margin: 0 0 0 20px;
+  z-index: 2;
+
+  br {
+    display: none;
+  }
 
   @media screen and  (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     margin-left: 0;
     margin-top: 31px;
+
+    br {
+      display: initial;
+    }
   }
+}
+
+.block-special__item--paper .block-special__picture {
+  img {
+    padding: 14px 15px;
+  }
+
+  @media (min-width: @tablet-width) {
+    img {
+      padding: 25px 26px 23px 24px;
+    }
+  }
+}
+
+.block-special__item--water .block-special__picture {
+  img {
+    width: 29px;
+    height: 31px;
+    padding: 13px 16px 16px 15px;
+  }
+
+  @media (min-width: @tablet-width) {
+    img {
+      padding: 24px 26px 25px 25px;
+    }
+  }
+}
+
+.block-special__item--fork .block-special__picture {
+  img {
+    padding: 15px 20px 15px 17px;
+  }
+
+  @media (min-width: @tablet-width) {
+    img {
+      padding: 25px 29px 25px 28px;
+    }
+  }
+}
+
+.block-special__item--alarm .block-special__picture {
+  img {
+    padding: 13px 14px 14px;
+  }
+
+  @media (min-width: @tablet-width) {
+    img {
+      padding: 23px 24px 24px 24px;
+    }
+  }
+}
+
+.block-special__number {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    display: initial;
+    font-family: @main-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 280px;
+    line-height: 280px;
+    color: #f2f2f2;
+    z-index: 1;
+    right: 16px;
+    top: 10px;
+    left: auto;
+  }
+}
+
+.block-special__item--water .block-special__number {
+  right: -2px;
+}
+
+.block-special__item--fork .block-special__number {
+  right: 1px;
+}
+
+
+.block-special__item--alarm .block-special__number {
+  right: -2px;
 }
