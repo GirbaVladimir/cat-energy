@@ -1,6 +1,6 @@
 
 .page-header {
-  height: 264px;
+  position: relative;
 
   @media screen and (min-width: @tablet-width) {
     display: flex;
@@ -21,27 +21,39 @@
 }
 
 .page-header__logo {
-  img {
-    width: 256px;
-    height: 39px;
+  margin-left: 20px;
+  height: 66px;
+  width: 192px;
+  display: block;
 
-    @media screen and (min-width: @tablet-width) {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  img {
+    padding-top: 11px;
+    //width: 192px;
+    //height: 66px;
+  }
+
+  @media screen and (min-width: @tablet-width) {
+    margin-left: 0;
+
+    img {
+      padding-top: 0;
       width: 174px;
       height: 52px;
     }
+  }
 
-    @media screen and (min-width: @desktop-width) {
+  @media screen and (min-width: @desktop-width) {
+    img {
       width: 202px;
       height: 59px;
     }
-  }
-}
-
-.page-header__button {
-  width: 24px;
-  height: 16px;
-
-  @media screen and (min-width: @tablet-width) {
-    display: none;
   }
 }

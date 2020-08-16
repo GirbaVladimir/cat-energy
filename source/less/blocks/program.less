@@ -16,6 +16,7 @@
   color: #000000;
   margin-left: 20px;
   margin-bottom: 37px;
+  margin-top: 26px;
 
   @media (min-width: @tablet-width) {
     margin-left: 29px;
@@ -104,6 +105,19 @@
     color: #444444;
     margin-bottom: 20px;
     padding-right: 0;
+
+    &:hover {
+      border: 1px solid #cdcdcd;
+      //box-sizing: border-box;
+    }
+
+    &:active {
+      border: 2px solid #444444;
+    }
+
+    &:invalid {
+      border: 2px solid #ff8282;
+    }
   }
 
   @media (min-width: @tablet-width) {
