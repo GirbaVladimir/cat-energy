@@ -1,0 +1,139 @@
+
+.slider {
+  margin-top: 42px;
+  padding-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    padding-bottom: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 680px;
+    padding-bottom: 0;
+  }
+}
+
+.slider__photo {
+  //pust
+}
+
+.slider__photo--before {
+  picture {
+    display: block;
+    width: 311px;
+    height: 232px;
+    margin-bottom: 27px;
+  }
+
+  img {
+    width: 311px;
+    height: 232px;
+  }
+
+  @media (min-width: @tablet-width) {
+    picture {
+      width: 708px;
+      height: 517px;
+      margin-left: 34px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 708px;
+      height: 517px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    picture {
+      width: 730px;
+      height: 536px;
+      margin-left: 0;
+      margin-bottom: 26px;
+    }
+
+    img {
+      height: 536px;
+    }
+  }
+}
+
+.slider__photo--after {
+  //pust
+}
+
+.slider__switch {
+  width: 84px;
+  height: 14px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.slider__button {
+  font-family: @main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  border: 0;
+  background-color: #eaeaea;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px dotted #bebebe;
+    padding-bottom: 1px;
+    height: 30px;
+
+    &:hover {
+      border-bottom: 1px solid #919191;
+    }
+
+    &:active {
+      border: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.slider__button--before {
+  margin-left: 63px;
+  margin-right: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 97px;
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 73px;
+  }
+}
+
+.slider__button--after {
+  margin-left: 13px;
+  margin-right: 59px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 99px;
+    margin-left: 470px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 459px;
+    margin-right: 0;
+  }
+}
