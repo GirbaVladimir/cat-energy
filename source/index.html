@@ -75,7 +75,6 @@
           <a class="promo__photo">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png">
-
               <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
               <img src="img/index-can-mobile@1x.png" alt="Промо-корм">
             </picture>
@@ -182,31 +181,32 @@
             Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
             Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
-          <div class="live-example__weight weight">
-            <dl class="weight__amount">
-              <dt class="weight__how-much">
-                5 КГ
-              </dt>
-              <dd class="weight__description">
-                снижение веса
-              </dd>
-            </dl>
-          </div>
-          <div class="live-example__time time">
-            <dl class="time__amount">
-              <dt class="time__how-much">
-                60 дней
-              </dt>
-              <dd class="time__description">
-                затрачено времени
-              </dd>
-            </dl>
-          </div>
-          <p class="live-example__price">
-            Затраты на питание: 15 000 РУБ.
-          </p>
-          <div class="live-example__slider">
-            <a class="live-example__photo live-example__photo--before">
+          <ul class="live-example__list">
+            <li class="live-example__weight weight">
+              <dl class="weight__amount">
+                <dt class="weight__how-much">
+                  5 КГ
+                </dt>
+                <dd class="weight__description">
+                  снижение веса
+                </dd>
+              </dl>
+            </li>
+            <li class="live-example__time time">
+              <dl class="time__amount">
+                <dt class="time__how-much">
+                  60 дней
+                </dt>
+                <dd class="time__description">
+                  затрачено времени
+                </dd>
+              </dl>
+            </li>
+          </ul>
+          <p class="live-example__price-text">Затраты на питание: </p>
+          <p class="live-example__price">15 000 РУБ.</p>
+          <div class="live-example__slider slider">
+            <a class="slider__photo slider__photo--before">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
                 <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
@@ -218,10 +218,10 @@
               <img src="https://via.placeholder.com/150x150" alt="после">
             </a>
             -->
-            <button class="live-example__button live-example__button--before">
+            <button class="slider__button slider__button--before">
               Было
             </button>
-            <a class="live-example__switch live-example__switch--before">
+            <a class="slider__switch slider__switch--before">
               <img src="https://via.placeholder.com/84x14" alt="до_переключатель">
             </a>
             <!--
@@ -229,7 +229,7 @@
               <img src="https://via.placeholder.com/50x50" alt="после_переключатель">
             </a>
             -->
-            <button class="live-example__button live-example__button--after">
+            <button class="slider__button slider__button--after">
               Стало
             </button>
           </div>

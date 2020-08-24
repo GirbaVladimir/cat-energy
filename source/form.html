@@ -58,7 +58,7 @@
     });
   </script>
 
-<main class="page-main">
+  <main class="page-main">
     <section class="form">
       <h2 class="visually-hidden">
         Секция с формой
@@ -73,26 +73,44 @@
               Заполните анкету, и мы подберем программу питания для вашего кота
             </p>
             <div class="program__input-wrapper">
-              <p class="program__name">ИМЯ:* <input type="text" placeholder="БАРСИК" name="name" required></p>
-              <p class="program__weight">Вес (кг):* <input type="number" placeholder="7" name="weight" required></p>
-              <p class="program__age">Возраст (лет): <input type="number" placeholder="7" name="age"></p>
+              <label class="program__label" for="name">ИМЯ:* </label>
+              <input type="text" class="program__name" placeholder="БАРСИК" id="name" name="name" value="БАРСИК" required>
+              <label class="program__label" for="weight">Вес (кг):* </label>
+              <input class="program__weight" id="weight" type="number" placeholder="7" name="weight" required value="7">
+              <label class="program__label" for="age">Возраст (лет): </label>
+              <input class="program__age" id="age" type="number" placeholder="7" name="age">
             </div>
             <div class="program__radio-wrapper">
-              <p class="program__radio program__radio--checked"><input name="diet" type="radio" checked>Похудение</p>
-              <p class="program__radio"><input name="diet" type="radio">Набор массы</p>
-              <p class="program__radio"><input name="diet" type="radio">Не знаю (Нужен ваш совет)</p>
+              <ul class="program__radio-list">
+                <li class="program__radio-item">
+                  <input name="diet" type="radio" class="program__radio" id="slim" checked>
+                  <label class="program__radio-label" for="slim">Похудение</label>
+                </li>
+                <li class="program__radio-item">
+                  <input name="diet" type="radio" id="fat" class="program__radio">
+                  <label class="program__radio-label" for="fat">Набор массы</label>
+                </li>
+                <li class="program__radio-item">
+                  <input class="program__radio" name="diet" type="radio" id="dntknw">
+                  <label class="program__radio-label" for="dntknw">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="main-form__user-contacts user-contacts">
             <h3 class="user-contacts__header">
               Контактные данные (владельца кота)
             </h3>
-            <p class="user-contacts__email">E-mail:*
-              <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
-            </p>
-            <p class="user-contacts__phone">Телефон:*
-              <input type="tel" name="phone" placeholder="8 (960) 900-60-90"  required>
-            </p> <!--Маску позже сделаю если надо ее делать -->
+            <ul class="user-contacts__list">
+              <li class="user-contacts__item">
+                <label class="user-contacts__label" for="mail">E-mail:*</label>
+                <input class="user-contacts__email" id="mail" type="email" name="email" placeholder="kuklachev@gmail.com" required value="kuklachev@gmail.com">
+              </li>
+              <li class="user-contacts__item">
+                <label class="user-contacts__label" for="tel">Телефон:*</label>
+                <input class="user-contacts__phone" id="tel" type="tel" name="phone" placeholder="8 (960) 900-60-90"  required value="8 (960) 900-60-90">
+              </li>
+            </ul>
           </div>
           <div class="main-form__comments comments">
             <h3 class="comments__header">
@@ -108,16 +126,20 @@
             </h3>
             <ul class="extra__list">
               <li class="extra__item">
-                <p class="extra__checkbox"><input type="checkbox" name="extra" checked>Сахарозаменитель</p>
+                <input class="extra__checkbox" id="sugar" type="checkbox" name="extra" checked>
+                <label class="extra__label" for="sugar">Сахарозаменитель</label>
               </li>
               <li class="extra__item">
-                <p class="extra__checkbox"><input type="checkbox" name="extra">Питьевая вода</p>
+                <input class="extra__checkbox" id="water" type="checkbox" name="extra">
+                <label class="extra__label" for="water">Питьевая вода</label>
               </li>
               <li class="extra__item">
-                <p class="extra__checkbox"><input type="checkbox" name="extra">Молоко</p>
+                <input id="milk" class="extra__checkbox" type="checkbox" name="extra">
+                <label class="extra__label" for="milk">Молоко</label>
               </li>
               <li class="extra__item">
-                <p class="extra__checkbox"><input type="checkbox" name="extra">Витамины</p>
+                <input class="extra__checkbox" type="checkbox" id="vitamins" name="extra">
+                <label class="extra__label" for="vitamins">Витамины</label>
               </li>
             </ul>
           </div>
