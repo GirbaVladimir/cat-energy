@@ -40,24 +40,6 @@
         </ul>
       </nav>
     </header>
-
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__button');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
-
     <main class="page-main">
       <h1 class="visually-hidden">
         Питание для котиков
@@ -74,9 +56,9 @@
           </p>
           <a class="promo__photo">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
-              <img src="img/index-can-mobile@1x.png" alt="Промо-корм">
+              <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+              <img src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Промо-корм">
             </picture>
           </a>
           <a class="promo__button" href="catalog.html">
@@ -84,7 +66,7 @@
           </a>
           <a class="promo__background">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/index-background-desktop@1x.jpg">
+              <source media="(min-width: 1440px)" srcset="img/index-background-desktop@1x.jpg 1x, img/index-background-desktop@2x.jpg 2x">
               <img src="#" alt="Промо-корм">
             </picture>
           </a>
@@ -205,31 +187,28 @@
           </ul>
           <p class="live-example__price-text">Затраты на питание: </p>
           <p class="live-example__price">15 000 РУБ.</p>
-          <div class="live-example__slider slider">
+          <div class="live-example__slider slider slider--before">
             <a class="slider__photo slider__photo--before">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-                <img src="img/before-mobile@1x.png" alt="до">
+                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="до">
               </picture>
             </a>
-            <!--
-            <a class="live-example__photo live-example__photo--after">
-              <img src="https://via.placeholder.com/150x150" alt="после">
+            <a class="slider__photo slider__photo--after">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="до">
+              </picture>
             </a>
-            -->
-            <button class="slider__button slider__button--before">
+            <button type="button" class="slider__button slider__button--before">
               Было
             </button>
-            <a class="slider__switch slider__switch--before">
+            <a class="slider__switch slider__switch--before live-example__switch--after">
               <img src="https://via.placeholder.com/84x14" alt="до_переключатель">
             </a>
-            <!--
-            <a class="live-example__switch live-example__switch--after">
-              <img src="https://via.placeholder.com/50x50" alt="после_переключатель">
-            </a>
-            -->
-            <button class="slider__button slider__button--after">
+            <button type="button" class="slider__button slider__button--after">
               Стало
             </button>
           </div>
@@ -248,7 +227,7 @@
             ул. Большая Конюшенная, д. 19/8 <br> <br> Cанкт-Петербург
           </p>
         </div>
-        <div class="contacts__map">
+        <div class="contacts__map contacts__map--nojs">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1937.2259316692468!2d30.320866623588035!3d59.938722387478734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1595252569653!5m2!1sru!2sru"
                   width="320" height="362">
           </iframe>
@@ -292,5 +271,45 @@
         </a>
       </div>
     </footer>
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var map = document.querySelector('.contacts__map');
+      var navToggle = document.querySelector('.main-nav__button');
+      var slider = document.querySelector('.slider');
+      var sliderButtonAfter = document.querySelector('.slider__button--after');
+      var sliderButtonBefore = document.querySelector('.slider__button--before');
+
+      navMain.classList.remove('main-nav--nojs');
+      map.classList.remove('contacts__map--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+
+      sliderButtonAfter.addEventListener('click', function (e){
+        e.preventDefault();
+        if (slider.classList.contains('slider--before')) {
+          slider.classList.remove('slider--before');
+          slider.classList.add('slider--after');
+
+        }
+      });
+
+      sliderButtonBefore.addEventListener('click', function (e){
+        e.preventDefault();
+        if(slider.classList.contains('slider--after')) {
+          slider.classList.remove('slider--after');
+          slider.classList.add('slider--before');
+        }
+      });
+    </script>
+
   </body>
 </html>
