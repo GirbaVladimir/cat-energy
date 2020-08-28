@@ -5,16 +5,21 @@
   background-color: white;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px 305px;
+  }
+
   @media screen and (min-width: @tablet-width) {
     height: 872px;
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-size: 709px 609px;
-    background-position: bottom;
+    background-image: none;
+    position: relative;
   }
 
   @media screen and (min-width: @desktop-width) {
+    position: static;
+    background: transparent;
     height: 583px;
-    background: none;
   }
 }
 
@@ -51,6 +56,8 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 22px;
+  z-index: 3;
+  position: relative;
 
   @media screen and (min-width: @tablet-width) {
     font-size: 20px;
@@ -79,7 +86,12 @@
     margin-left: 20px;
 
     @media screen and (min-width: @tablet-width) {
-      display: none;
+      position: absolute;
+      top: 263px;
+      margin-left: 29px;
+      z-index: 1;
+      width: 709px;
+      height: 609px;
     }
 
     @media screen and (min-width: @desktop-width) {
@@ -87,7 +99,6 @@
       width: 552px;
       height: 499px;
       margin-left: 558px;
-      position: absolute;
       top: 141px;
     }
   }
