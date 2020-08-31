@@ -87,10 +87,25 @@
 .block-special__picture {
   background: #68b738;
   z-index: 2;
+  display: flex;
+  align-items: center;
   height: 60px;
+  width: 60px;
+
+
+  img {
+    height: 50px;
+    width: 50px;
+    padding: 5px;
+  }
 
   @media (min-width: @tablet-width) {
     height: 80px;
+    width: 80px;
+
+    img {
+      padding: 15px;
+    }
   }
 }
 
@@ -120,55 +135,53 @@
   }
 }
 
-.block-special__item--paper .block-special__picture {
-  img {
-    padding: 14px 15px;
-  }
-
-  @media (min-width: @tablet-width) {
-    img {
-      padding: 25px 26px 23px 24px;
-    }
-  }
-}
-
-.block-special__item--water .block-special__picture {
-  img {
-    width: 29px;
-    height: 31px;
-    padding: 13px 16px 16px 15px;
-  }
-
-  @media (min-width: @tablet-width) {
-    img {
-      padding: 24px 26px 25px 25px;
-    }
-  }
-}
-
-.block-special__item--fork .block-special__picture {
-  img {
-    padding: 15px 20px 15px 17px;
-  }
-
-  @media (min-width: @tablet-width) {
-    img {
-      padding: 25px 29px 25px 28px;
-    }
-  }
-}
-
-.block-special__item--alarm .block-special__picture {
-  img {
-    padding: 13px 14px 14px;
-  }
-
-  @media (min-width: @tablet-width) {
-    img {
-      padding: 23px 24px 24px 24px;
-    }
-  }
-}
+//.block-special__item--paper .block-special__picture {
+//  img {
+//    //padding: 14px 15px;
+//  }
+//
+//  @media (min-width: @tablet-width) {
+//    img {
+//      padding: 25px 26px 23px 24px;
+//    }
+//  }
+//}
+//
+//.block-special__item--water .block-special__picture {
+//  img {
+//    //padding: 13px 16px 16px 15px;
+//  }
+//
+//  @media (min-width: @tablet-width) {
+//    img {
+//      padding: 24px 26px 25px 25px;
+//    }
+//  }
+//}
+//
+//.block-special__item--fork .block-special__picture {
+//  img {
+//    //padding: 15px 20px 15px 17px;
+//  }
+//
+//  @media (min-width: @tablet-width) {
+//    img {
+//      padding: 25px 29px 25px 28px;
+//    }
+//  }
+//}
+//
+//.block-special__item--alarm .block-special__picture {
+//  img {
+//    //padding: 13px 14px 14px;
+//  }
+//
+//  @media (min-width: @tablet-width) {
+//    img {
+//      padding: 23px 24px 24px 24px;
+//    }
+//  }
+//}
 
 .block-special__number {
   display: none;
