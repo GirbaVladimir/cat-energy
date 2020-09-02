@@ -83,6 +83,7 @@
 
 .user-contacts__item {
   margin-left: 19px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-left: 71px;
@@ -114,11 +115,43 @@
   }
 }
 
+.user-contacts__email-icon {
+  position: absolute;
+  width: 20px;
+  height: 14px;
+  top: 16px;
+  left: 246px;
+
+  @media (min-width: @tablet-width) {
+    top: 19px;
+    left: 595px;
+    width: 18px;
+    height: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 531px;
+  }
+}
+
+.user-contacts__phone-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 13px;
+  left: 248px;
+
+  @media (min-width: @tablet-width) {
+    left: 597px;
+    top: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 535px;
+  }
+}
+
 .user-contacts__email {
-  background-image: url("../img/icon-mail.svg");
-  background-size: 35px 14px;
-  background-repeat: no-repeat;
-  background-position: right; //poka cto tak
   width: 219px;
   height: 45px;
   border: 1px solid #cdcdcd;
@@ -133,6 +166,7 @@
   padding: 0 0 0 15px;
   color: #444444;
   margin-bottom: 14px;
+  position: relative;
 
   &:hover {
     border: 1px solid #cdcdcd;
@@ -164,10 +198,6 @@
 }
 
 .user-contacts__phone {
-  background-image: url("../img/icon-phone.svg");
-  background-size: 32px 20px;
-  background-repeat: no-repeat;
-  background-position: right; //poka cto tak
   width: 204px;
   height: 45px;
   font-family: @main-font;
