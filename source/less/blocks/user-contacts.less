@@ -174,6 +174,7 @@
 
   &:invalid {
     border: 2px solid #ff8282;
+    fill: #ff8282;
   }
 
   @media (min-width: @tablet-width) {
@@ -241,4 +242,14 @@
     padding-left: 18px;
     width: 472px;
   }
+}
+
+.user-contacts__email:hover + .user-contacts__email-icon,
+.user-contacts__phone:hover + .user-contacts__phone-icon {
+  fill: #68b738;
+}
+
+.user-contacts__email:invalid + .user-contacts__email-icon,
+.user-contacts__phone:invalid + .user-contacts__phone-icon {
+  fill: #ff8282;
 }

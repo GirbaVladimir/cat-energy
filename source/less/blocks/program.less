@@ -239,16 +239,18 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #222222;
-  margin-left: 15px;
+  margin-left: 45px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    margin-left: 20px;
+    margin-left: 60px;
   }
 }
 
 .program__radio {
+  //position: absolute;
+  opacity: 0;
   width: 30px;
   height: 30px;
   margin: 0;
@@ -261,4 +263,43 @@
 
 .program__radio-item:nth-child(3) {
   margin-bottom: 0;
+}
+
+.program__radio-fake {
+  width: 30px;
+  height: 30px;
+  margin: -30px;
+  background-image: url("../img/icon-radio.svg");
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    margin: -40px;
+    background-size: 40px;
+  }
+}
+
+.program__radio:checked + .program__radio-fake {
+  background-image: url("../img/icon-radio-checked.svg");
+
+  @media (min-width: @tablet-width) {
+    background-size: 40px;
+  }
+}
+
+
+.program__radio:hover + .program__radio-fake {
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='14.5' stroke='%23BABABA'/%3E%3C/svg%3E ");
+
+  @media (min-width: @tablet-width) {
+    background-size: 40px;
+  }
+}
+
+.program__radio:checked:hover + .program__radio-fake {
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='14.5' stroke='%23BABABA'/%3E%3Cellipse cx='15' cy='15' rx='6.75' ry='6.75' fill='%2368B738'/%3E%3C/svg%3E ");
+
+  @media (min-width: @tablet-width) {
+    background-size: 40px;
+  }
 }

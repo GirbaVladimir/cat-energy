@@ -38,6 +38,8 @@
 }
 
 .contacts__map {
+  height: 362px;
+
   @media screen and (min-width: @desktop-width) {
     grid-row-start: 1;
     grid-row-end: 2;
@@ -45,21 +47,14 @@
     grid-column-end: 3;
   }
 
-  iframe {
-    min-width: 320px;
-    max-width: 767px;
-    height: 362px;
-    border: 0;
+  @media screen and (min-width: @tablet-width) {
+    height: 400px;
+    min-width: 768px;
+    max-width: 1439px;
+  }
 
-    @media screen and (min-width: @tablet-width) {
-      min-width: 768px;
-      max-width: 1439px;
-      height: 400px;
-    }
-
-    @media screen and (min-width: @desktop-width) {
-      min-width: 1440px;
-    }
+  @media screen and (min-width: @desktop-width) {
+    min-width: 1440px;
   }
 }
 
@@ -68,7 +63,7 @@
     display: none;
   }
 
-  height: 362px;
+
   background-image: url("../img/bg-map-mobile@1x.png");
   background-size: 320px auto;
 
