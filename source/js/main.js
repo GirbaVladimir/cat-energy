@@ -22,7 +22,7 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-let map_google;
+var map_google;
 
 function initMap() {
   map_google = new google.maps.Map(document.getElementById("map"), {
@@ -43,13 +43,13 @@ function initMap() {
     });}
 
   var icon = {
-    url: "../img/map-pin.png", // url
+    url: "img/map-pin.png", // url
     scaledSize: new google.maps.Size(60, 53), // scaled size
   };
 
   if (window.matchMedia("(min-width: 768px)").matches) {
     var icon = {
-      url: "../img/map-pin.png", // url
+      url: "img/map-pin.png", // url
       scaledSize: new google.maps.Size(120, 106), // scaled size
     }
   }

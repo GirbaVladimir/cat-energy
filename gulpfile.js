@@ -46,7 +46,6 @@ const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
     "source/*.ico",
   ], {
     base: "source"
@@ -78,12 +77,26 @@ const html = () => {
 
 exports.html = html;
 
+var uglify = require('gulp-uglify');
+var pipeline = require('readable-stream').pipeline;
+
+const js= () => {
+  return pipeline(
+    gulp.src('source/js/*.js'),
+    uglify(),
+    gulp.dest('build/js')
+  )};
+
+
+exports.js = js;
+
 //build
 
 const build = gulp.series(
   clean,
   copy,
   styles,
+  js,
   html,
 );
 
