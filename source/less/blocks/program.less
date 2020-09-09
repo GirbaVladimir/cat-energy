@@ -25,7 +25,7 @@
     line-height: 60px;
     width: 432px;
     height: 60px;
-    margin-top: 64px;
+    margin-top: 62px;
   }
 
   @media (min-width: @desktop-width) {
@@ -74,7 +74,7 @@
 .program__input-wrapper {
   margin-left: 19px;
   margin-right: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     margin-left: 71px;
@@ -158,6 +158,13 @@
 .program__weight {
   width: 205px;
   height: 45px;
+  appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
 
   @media (min-width: @tablet-width) {
     width: 536px;
@@ -175,6 +182,13 @@
   width: 172px;
   height: 45px;
   margin-bottom: 0;
+  appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
 
   @media (min-width: @tablet-width) {
     width: 497px;
@@ -212,7 +226,7 @@
   list-style-type: none;
   margin: 0;
   padding-top: 20px;
-  padding-bottom: 22px;
+  padding-bottom: 20px;
 
   @media (min-width: @tablet-width) {
     padding-top: 25px;

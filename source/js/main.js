@@ -33,7 +33,7 @@ function initMap() {
   if (window.matchMedia("(min-width: 768px)").matches) {
     map_google = new google.maps.Map(document.getElementById("map"), {
       center: { lat: 59.938719, lng: 30.323046 },
-      zoom: 15
+      zoom: 16
     });}
 
   if (window.matchMedia("(min-width: 1440px)").matches) {
@@ -53,10 +53,28 @@ function initMap() {
       scaledSize: new google.maps.Size(120, 106), // scaled size
     }
   }
+  if (window.matchMedia("(min-width: 1440px)").matches) {
+    var marker = new google.maps.Marker({
+      position: {lat: 59.938660, lng: 30.322899},
+      map: map_google,
+      icon: icon
+    });
+  }
 
-  var marker = new google.maps.Marker({
-    position: { lat: 59.938719, lng: 30.323046 },
-    map: map_google,
-    icon: icon
-  });
+  else if (window.matchMedia("(min-width: 768px)").matches) {
+    var marker = new google.maps.Marker({
+      position: { lat: 59.938063, lng: 30.323210 },
+      map: map_google,
+      icon: icon
+    });
+  }
+
+  else if (window.matchMedia("(max-width: 767px)").matches) {
+    var marker = new google.maps.Marker({
+      position: {lat:  59.938429, lng: 30.322958},
+      map: map_google,
+      icon: icon
+    });
+  }
+
 }
