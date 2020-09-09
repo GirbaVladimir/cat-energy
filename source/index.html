@@ -90,30 +90,6 @@
         <path d="M8,4.9c1.7,0,3.1,1.4,3.1,3.1S9.7,11.1,8,11.1S4.9,9.7,4.9,8S6.3,4.9,8,4.9 M8,3.9C5.7,3.9,3.9,5.7,3.9,8s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9z"/>
         <circle cx="12.3" cy="3.7" r="0.9"/>
       </symbol>
-
-      <symbol id="icon-slider" width="84" height="14" viewBox="0 0 84 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0.5" y="0.5" width="83" height="13" rx="5.5" fill="white" stroke="#CDCDCD"/>
-        <rect x="6" y="4" width="35" height="6" rx="3" fill="#68B738"/>
-      </symbol>
-
-      <symbol id="icon-slider-tablet" width="428" height="40" viewBox="0 0 428 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect y="16" width="428" height="6" rx="3" fill="#DCDCDC"/>
-        <g filter="url(#filter0_d)">
-          <circle cx="214" cy="19" r="16.5" fill="white" stroke="#CDCDCD"/>
-          <circle cx="214" cy="19" r="4" fill="#68B738"/>
-        </g>
-        <defs>
-          <filter id="filter0_d" x="194" y="0" width="40" height="40" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-            <feOffset dy="1"/>
-            <feGaussianBlur stdDeviation="1.5"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-          </filter>
-        </defs>
-      </symbol>
     </svg>
     <header class="page-header">
       <a class="page-header__logo" href="#">
@@ -179,7 +155,7 @@
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/webp/index-background-desktop@1x.webp 1x, img/webp/index-background-desktop@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/index-background-desktop@1x.jpg 1x, img/index-background-desktop@2x.jpg 2x">
-              <img src="#" alt="Промо-корм" width="720" height="694 ">
+              <img src="#" alt="Промо-корм" width="720" height="694">
             </picture>
           </a>
       </section>
@@ -339,7 +315,9 @@
             <button type="button" class="slider__button slider__button--before">
               Было
             </button>
-            <div class="slider__switch slider__switch--before live-example__switch--after"></div>
+            <div class="slider__switch slider__switch--before live-example__switch--after">
+              <span></span>
+            </div>
             <button type="button" class="slider__button slider__button--after">
               Стало
             </button>

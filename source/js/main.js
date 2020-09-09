@@ -32,13 +32,13 @@ function initMap() {
 
   if (window.matchMedia("(min-width: 768px)").matches) {
     map_google = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: 59.938719, lng: 30.323046 },
-      zoom: 16
+      center: { lat: 59.939169, lng: 30.323336 },
+      zoom: 15
     });}
 
   if (window.matchMedia("(min-width: 1440px)").matches) {
     map_google = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: 59.938889, lng: 30.318529 },
+      center: { lat: 59.939076, lng: 30.317815 },
       zoom: 16
     });}
 
