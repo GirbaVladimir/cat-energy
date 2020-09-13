@@ -11,9 +11,21 @@
   @media (min-width: @desktop-width) {
     position: absolute;
     top: 15px;
-    left: 680px;
+    left: auto;
+    right: 69px;
     padding-bottom: 0;
     z-index: 2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: -70px;
+      height: 463px;
+      width: 100%;
+      background: linear-gradient(to right, #f2f2f2 52.8%, #eaeaea 47.2%);
+      z-index: -1;
+    }
   }
 }
 
