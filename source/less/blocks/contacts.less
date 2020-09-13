@@ -1,18 +1,10 @@
-
 .contacts {
   background: #f2f2f2;
-  min-width: 320px;
-  max-width: 767px;
-
-  @media screen and (min-width: @tablet-width) {
-    min-width: 768px;
-    max-width: 1439px;
-  }
 
   @media screen and (min-width: @desktop-width) {
-    min-width: 1440px;
+    width: auto;
     display: grid;
-    grid-template-columns: 720px 720px;
+    grid-template-columns: auto auto;
     grid-template-rows: 95px 200px 105px;
   }
 }
@@ -49,21 +41,10 @@
 
   @media screen and (min-width: @tablet-width) {
     height: 400px;
-    min-width: 768px;
-    max-width: 1439px;
-  }
-
-  @media screen and (min-width: @desktop-width) {
-    min-width: 1440px;
   }
 }
 
 .contacts__map--nojs {
-  iframe {
-    display: none;
-  }
-
-
   background-image: url("../img/bg-map-mobile@1x.png");
   background-size: 320px auto;
 

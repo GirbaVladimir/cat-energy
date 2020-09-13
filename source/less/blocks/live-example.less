@@ -1,16 +1,41 @@
-
 .live-example {
   background: #eaeaea;
 
   @media (min-width: @tablet-width) {
     border-top: 1px solid #e6e6e6;
     background: linear-gradient(to bottom, white 57%, #eaeaea 43%);
-    position: relative;
   }
 
   @media (min-width: @desktop-width) {
     border: 0;
     background: linear-gradient(to top, #f2f2f2 70%, white 30%);
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 27.5%;
+      height: 455px;
+      background: #eaeaea;
+      z-index: 1;
+    }
+  }
+}
+
+.live-example__wrapper {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
   }
 }
 
@@ -122,14 +147,6 @@
     margin-top: 69px;
     margin-bottom: 56px;
   }
-}
-
-.live-example__time {
-  //pust
-}
-
-.live-example__weight {
-  //pust
 }
 
 .live-example__text {

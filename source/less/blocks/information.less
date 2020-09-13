@@ -1,7 +1,17 @@
-
 .information {
   display: flex;
   justify-content: space-between;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    margin-left: 110px;
+  }
 }
 
 .information__address {
@@ -38,7 +48,6 @@
   @media (min-width: @desktop-width) {
     margin-top: 63px;
     margin-right: 85px;
-
     text-align: left;
   }
 }
@@ -49,7 +58,6 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 131%;
-
   text-transform: uppercase;
   color: #111111;
   margin-top: 28px;
