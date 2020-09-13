@@ -1,28 +1,31 @@
-
 .page-header {
   position: relative;
+  margin: 0 auto;
+  width: 320px;
 
   @media screen and (min-width: @tablet-width) {
+    width: 709px;
     display: flex;
     height: 54px;
     justify-content: space-between;
     margin-top: 25px;
-    margin-left: 30px;
-    margin-right: 29px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @media screen and  (min-width: @desktop-width) {
     height: 59px;
-    margin-left: 110px;
-    margin-right: 109px;
+    padding-left: 110px;
+    padding-right: 109px;
     margin-top: 54px;
     background: transparent;
+    width: 1221px;
   }
 }
 
 .page-header__logo {
   margin-left: 20px;
-  height: 66px;
+  height: 65px;
   width: 192px;
   display: block;
 
@@ -35,9 +38,7 @@
   }
 
   img {
-    padding-top: 11px;
-    //width: 192px;
-    //height: 66px;
+    padding-top: 10px;
   }
 
   @media screen and (min-width: @tablet-width) {
@@ -55,5 +56,15 @@
       width: 202px;
       height: 59px;
     }
+  }
+}
+
+.page-header__logo--index {
+  &:hover {
+    opacity: initial;
+  }
+
+  &:active {
+    opacity: initial;
   }
 }

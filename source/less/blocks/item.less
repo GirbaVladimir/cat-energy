@@ -1,4 +1,3 @@
-
 .item {
   border-bottom: 1px solid #ebebeb;
   position: relative;
@@ -23,13 +22,14 @@
     font-size: 20px;
     width: 150px;
     line-height: 24px;
-    margin: 242px auto 21px;
+    margin: 161px auto 14px;
     height: 47px;
   }
 
   @media (min-width: @desktop-width) {
     line-height: 21px;
-    margin-top: 240px;
+    margin-top: 164px;
+    margin-bottom: 12px;
   }
 }
 
@@ -37,29 +37,56 @@
   position: absolute;
   left: 20px;
 
+  picture {
+    display: block;
+    height: 140px;
+    width: 143px;
+  }
+
+  img {
+    width: 140px;
+    height: 142px;
+  }
+
   @media (min-width: @tablet-width) {
     left: 0;
-    bottom: 303px;
+    bottom: 335px;
+
+    img {
+      width: 324px;
+      height: 172px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    bottom: 310px;
+    bottom: 342px;
+
+    img {
+      width: 245px;
+      height: 172px;
+    }
   }
 }
 
-//.item__photo--big {
-//  @media (min-width: @tablet-width) {
-//    left: 0;
-//    bottom: 295px;
-//  }
-//
-//  @media (min-width: @desktop-width) {
-//    bottom: 303px;
-//  }
-//}
+.item__photo--big {
+  @media (min-width: @tablet-width) {
+    left: 0;
+    bottom: 361px;
 
-.item__description {
-  //poka pust
+    img {
+      width: 324px;
+      height: 208px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 370px;
+
+    img {
+      width: 245px;
+      height: 208px;
+    }
+  }
 }
 
 .item__button {

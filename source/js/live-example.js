@@ -3,7 +3,6 @@ sliderButtonAfter.addEventListener('click', function (e){
   if (slider.classList.contains('slider--before')) {
     slider.classList.remove('slider--before');
     slider.classList.add('slider--after');
-
   }
 });
 
